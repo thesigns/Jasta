@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1b1a16">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="description" content="Jasta – air combat over the Western Front, 1917. A browser game.">
+  <title>Jasta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <canvas id="hud"></canvas>
+  <div id="cloud-fade"></div>
+  <div id="damage-flash"></div>
+
+  <div id="controls" class="hidden">
+    <div id="stick-zone">
+      <div id="stick-base"><div id="stick-knob"></div></div>
+    </div>
+    <div id="fire-zone">
+      <div id="fire-btn">FIRE</div>
+    </div>
+    <div id="throttle">
+      <div class="track"><div class="fill"></div><div class="handle"></div></div>
+      <span class="label">THR</span>
+    </div>
+    <button id="pause-btn" aria-label="Pause">II</button>
+    <button id="look-btn" aria-label="Recenter view">◎</button>
+  </div>
+
+  <section id="menu" class="screen">
+    <div class="card">
+      <h1>JASTA 11</h1>
+      <p class="sub">Western Front · 1917</p>
+      <button id="start-btn" class="btn">TAKE OFF</button>
+      <label class="opt"><input type="checkbox" id="opt-invert"> Invert stick</label>
+      <label class="opt touch-only"><input type="checkbox" id="opt-look" checked> Look around by turning the phone</label>
+      <div class="help">
+        <p><b>Left thumb</b> – stick &nbsp;·&nbsp; <b>Right thumb</b> – fire &nbsp;·&nbsp; <b>Slider</b> – throttle</p>
+        <p class="touch-only">Turn the phone to look around · ◎ – recenter view</p>
+        <p class="desk">Keyboard: arrows / WASD, Space – fire, R / F – throttle, Q / E – look around, P – pause</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pause" class="screen hidden">
+    <div class="card">
+      <h2>PAUSED</h2>
+      <button id="resume-btn" class="btn">RESUME</button>
+      <button id="restart-btn" class="btn btn-alt">RESTART</button>
+    </div>
+  </section>
+
+  <section id="gameover" class="screen hidden">
+    <div class="card">
+      <h2 id="go-title">SHOT DOWN</h2>
+      <p id="go-stats"></p>
+      <button id="again-btn" class="btn">FLY AGAIN</button>
+    </div>
+  </section>
+
+  <div id="loading">Loading…</div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
