@@ -3,6 +3,8 @@
 WWI air combat over the Western Front, 1917, in the style of *Red Baron* (1990).
 Cockpit view from the red Fokker Dr.I, low-poly 3D, a mobile-first browser game.
 
+**Play: https://thesigns.github.io/Jasta/**
+
 ## Running locally
 
 ES modules need an HTTP server (it won't work from `file://`):
