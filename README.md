@@ -55,3 +55,7 @@ in Blender (the glTF exporter converts that to −Z, which is "forward" in the g
 ## GitHub Pages
 
 All paths are relative – just enable Pages for the branch that has `index.html` in the root.
+
+## License
+
+[MIT](LICENSE) © 2026 Jakub W. Adamczyk
